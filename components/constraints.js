@@ -46,6 +46,10 @@ class Constraints extends Component {
           <li>max length: {constraints.get('maxProperties')}</li>
         }
 
+        {(constraints.get('minItems') || constraints.get('minItems') === 0) &&
+          <li>min items: {constraints.get('minItems')}</li>
+        }
+
         {(constraints.get('minLength') || constraints.get('minLength') === 0) &&
           <li>min length: {constraints.get('minLength')}</li>
         }
